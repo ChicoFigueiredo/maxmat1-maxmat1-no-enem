@@ -1,0 +1,45 @@
+
+% CONFIGURAÇÕES DE PACOTES
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+	Nenhuma citação no texto.%
+	\or
+	Citado na página #2.%
+	\else
+	Citado #1 vezes nas páginas #2.%
+	\fi}%
+
+% alterando o aspecto da cor azul
+%\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+    \hypersetup{
+    	%pagebackref=true,
+    	pdftitle={\@title},
+    	pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+    	pdfcreator={LaTeX with abnTeX2},
+    	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho academico},
+    	colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=black,        	% color of links to bibliography
+    	filecolor=black,      		% color of file links
+    	urlcolor=black,
+    	bookmarksdepth=4
+    }
+\makeatother
+
+
+\makeatletter
+    \newcommand{\includetikz}[1]{%
+    	\tikzsetnextfilename{#1}%
+    	\input{#1.tex}%
+    }
+\makeatother

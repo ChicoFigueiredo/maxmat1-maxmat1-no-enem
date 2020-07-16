@@ -1,0 +1,110 @@
+
+% Personalização das opções das listas
+\setlist[itemize]{leftmargin=\parindent}
+
+% Citação online --- MODIFICAR ---
+\newcommand{\citeaa}[1]{\citeauthoronline{#1}~(\citeyear{#1})}
+
+\newcommand{\me}[1]{Elaborado pelo autor, #1.}
+
+% Configuração do pgfplots
+\pgfplotsset{compat=newest} %compat=1.14
+\pgfplotsset{plot coordinates/math parser=false}
+\newlength\figureheight
+\newlength\figurewidth
+
+% Libraries do TiKz
+\usetikzlibrary{quotes,angles,arrows}
+\usetikzlibrary{through,calc,math}
+\usetikzlibrary{graphs,backgrounds,fit}
+\usetikzlibrary{shapes,positioning,patterns,shadows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{external}
+
+%\tikzexternalize[]
+%\tikzexternalenable
+%\tikzexternalize
+%\tikzexternaldisable
+%\tikzset{external/force remake}
+%\tikzexternalize[shell escape=-enable-write18]
+
+% Configurações do CircuiTiKz
+\ctikzset{bipoles/thickness=1}
+%\ctikzset{bipoles/length=1.2cm}
+\ctikzset{monopoles/ground/width/.initial=.2}
+\ctikzset{bipoles/resistor/height=0.25}
+\ctikzset{bipoles/resistor/width=0.6}
+\ctikzset{bipoles/capacitor/height=0.5}
+\ctikzset{bipoles/capacitor/width=0.15}
+\ctikzset{bipoles/generic/height=0.25}
+\ctikzset{bipoles/generic/width=0.6}
+%\ctikzset{bipoles/capacitor polar/length=0.5}
+%\ctikzset{bipoles/diode/height=.375}
+%\ctikzset{bipoles/diode/width=.3}
+%\ctikzset{tripoles/thyristor/height=.8}
+%\ctikzset{tripoles/thyristor/width=1}
+\ctikzset{bipoles/vsourcesin/height=.5}
+\ctikzset{bipoles/vsourcesin/width=.5}
+\ctikzset{bipoles/cvsourceam/height=.6}
+\ctikzset{bipoles/cvsourceam/width=.6}
+%\ctikzset{tripoles/european controlled voltage source/width=.4}
+
+\tikzstyle{every node}=[font=\footnotesize]
+\tikzstyle{every path}=[line width=0.25pt,line cap=round,line join=round]
+%\tikzstyle{every path}=[line cap=round,line join=round]
+
+
+% Definição de cores MATLAB
+\definecolor{matlab_blue}{rgb}	{         0,    0.4470,    0.7410}
+\definecolor{matlab_orange}{rgb}{    0.8500,    0.3250,    0.0980}
+\definecolor{matlab_yellow}{rgb}{    0.9290,    0.6940,    0.1250}
+\definecolor{matlab_violet}{rgb}{    0.4940,    0.1840,    0.5560}
+\definecolor{matlab_green}{rgb}	{	 0.4660,    0.6740,    0.1880}
+\definecolor{matlab_lblue}{rgb}	{    0.3010,    0.7450,    0.9330}
+\definecolor{matlab_red}{rgb}	{    0.6350,    0.0780,    0.1840}
+
+% Personalização das legendas
+\usepackage[format = hang,
+			labelsep = endash,
+			singlelinecheck = false,
+			skip = 6pt,
+			listformat = simple]{caption}
+
+% Personalização das unidades
+\sisetup{output-decimal-marker = {,}}
+\sisetup{exponent-product = \cdot, output-product = \cdot}
+\sisetup{tight-spacing=true}
+\sisetup{group-digits = false}
+
+% Personalizações de tipo de colunas de tabelas
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Personalizações de cores da UDESC
+\definecolor{CapaAmareloUDESC}{RGB}{243,186,83}		% Especializacao
+\definecolor{CapaVerdeUDESC}{RGB}{0,112,52}			% Mestrado
+\definecolor{CapaVermelhoUDESC}{RGB}{171,35,21}		% Doutorado
+\definecolor{CapaAzulUDESC}{RGB}{38,54,118} 		% Pós-Doutorado
+
+
+% Espaçamento depois do título
+\setlength{\afterchapskip}{0.7\baselineskip}
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.25cm}
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.15cm}  % tente também \onelineskip
+%\SingleSpacing % Espaçamento simples
+\OnehalfSpacing % Espaçamento 1,5 (UDESC/CCT)
+%\DoubleSpacing	% Espaçamento duplo
+
+% ---
+% Margens - NBR 14724/2011 - 5.1 Formato
+% ---
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+\checkandfixthelayout[fixed]
+% ---
+

@@ -1,0 +1,86 @@
+% ----------------------------------------------------------
+% Pacotes básicos
+% ----------------------------------------------------------
+\usepackage{amsmath}							% Pacote matemático
+\usepackage{amssymb}							% Pacote matemático
+\usepackage{amsfonts}							% Pacote matemático
+\usepackage{lmodern}							% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}						% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}						% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}							% Usado pela Ficha catalográfica
+\usepackage{indentfirst}						% Indenta o primeiro parágrafo de cada seção.
+\usepackage[dvipsnames,table]{xcolor}			% Controle das cores
+\usepackage{graphicx}							% Inclusão de gráficos
+\usepackage{microtype} 							% para melhorias de justificação
+\usepackage{lipsum}								% para geração de dummy text
+\usepackage[brazilian,hyperpageref]{backref}	% Paginas com as citações na bibl
+%\usepackage[alf]{abntex2cite}					% Citações padrão ABNT
+\usepackage[num]{abntex2cite}					% Citações padrão ABNT numérica
+\usepackage{adjustbox}							% Pacote de ajuste de boxes
+\usepackage{subcaption}							% Inclusão de Subfiguras e sublegendas
+\usepackage{enumitem}							% Personalização de listas
+\usepackage{siunitx}							% Grandezas e unidades
+\usepackage[section]{placeins}					% Manter as figuras delimitadas na respectiva seção com a opção [section]
+\usepackage{multirow}							% Multi colunas nas tabelas
+\usepackage{array,tabularx} 					% Pacotes de tabelas
+\usepackage{booktabs}							% Pacote de tabela profissonal
+\usepackage{rotating}							% Rotacionar figuras e tabelas
+\usepackage{xfrac}								% Fazer frações n/d em linha
+\usepackage{bm}									% Negrito em modo matemático
+\usepackage{xstring}							% Manipulação de strings
+\usepackage{pgfplots}							% Pacote de Gráficos
+\usepackage{tikz}								% Pacote de Figuras
+\usepackage[american, cuteinductors,smartlabels, fulldiode, siunitx, americanvoltages, oldvoltagedirection, smartlabels]{circuitikz}						% Pacote de circuitos elétricos
+
+\usepackage{hyperref}
+\hypersetup{breaklinks=true} % set automatically by hyperref?
+
+% Centraliza captions of pictures
+\usepackage[justification=centering]{caption}
+
+
+% glossário, com fix para erros
+%\usepackage[acronym]{glossaries}
+
+
+% To use externalize consider
+%https://tex.stackexchange.com/questions/182783/tikzexternalize-not-compatible-with-miktex-2-9-abntex2-package
+%Lauro Cesar digged into the problem until he came with a solution for me to test. And it Works!
+%
+%According to this link:
+%
+%The package calc changed the commands \setcounter and friends to be fragile. So you have to make them robust. The example below uses etoolbox with \robustify:
+%
+\usepackage{etoolbox}
+\robustify\setcounter
+\robustify\addtocounter
+\robustify\setlength
+\robustify\addtolength
+
+
+%% How to silence memoir class warning against the use of caption package?
+%% https://tex.stackexchange.com/questions/391993/how-to-silence-memoir-class-warning-against-the-use-of-caption-package
+%\usepackage{silence}
+%\WarningFilter*{memoir}{You are using the caption package with the memoir class}
+%\WarningFilter*{Class memoir Warning}{You are using the caption package with the memoir class}
+
+
+% -----------------------------------------------------------------
+% Você pode adicionar seus pacotes a partir desta linha;
+% -----------------------------------------------------------------
+
+%\usepackage[showframe,pass]{geometry}
+%\usepackage[11,12]{pagesel}
+
+\usepackage{qrcode}
+
+
+\usepackage{multirow}
+\usepackage{xcolor}
+
+% -----------------------------------------------------------------
+% pacote interno
+\usepackage{udescCCT}
+
+
+

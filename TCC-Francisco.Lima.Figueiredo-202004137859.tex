@@ -1,0 +1,37 @@
+% Comprensão
+\pdfminorversion=5
+\pdfcompresslevel=9
+\pdfobjcompresslevel=2
+
+\documentclass[
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel.
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	sumario=abnt-6027-2012,
+	english,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+]{abntex2}
+
+\usepackage{import}    % package import tem o comando import que faz a importação com "novo path"
+\import{0-conf/}{!configurations}
+
+% compila o indice
+\makeindex
+
+% -----------------------------------------------------------------
+% Início do documento
+% -----------------------------------------------------------------
+\begin{document}
+	\import{1-pream/}{!preambulos}
+    \import{2-caps/}{!capitulos}
+    \import{8-bib/}{!bibliografia}
+    \import{9-pos/}{!pos-textuais}
+
+\end{document}
+
+% -----------------------------------------------------------------
+% Fim do Documento
+% -----------------------------------------------------------------
