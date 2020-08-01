@@ -26,56 +26,48 @@ $ i = 1\% = \frac{1}{100} = 0,01 $
 
 fator de capitalização: $ 1 + i = 1 + 0,01 \Longrightarrow 1 + i = 1,01 $
 
-\begin{figure}[ht] \label{fluxo}
-    \unitlength=1mm \caption{Fluxo de caixa}
-    \centering{\fbox{
-        \begin{picture}(100,50)
-            \drawline(10,25)(90,25)
-            %\vector(1,0){80}
-            
-            %VPL
-            \put(10,25){\vector(0, 1){20}}
-            
-        
-            \put(30,25){\vector(0,-1){15}}
-            \put(60,25){\vector(0,-1){15}}
-        
-            %\put(20,25){\vector(0,-1){15}}
-            %\put(30,25){\vector(0,-1){15}}
-            %\put(40,25){\vector(0,-1){15}}
-            %\put(50,25){\vector(0,-1){15}}
-            %\put(70,25){\vector(0,-1){15}}
-            %\put(80,25){\vector(0,-1){15}}
-            %\put(90,25){\vector(0,-1){15}}
-            
-            \put( 6,40){V} 
-            
-            %\put(16,20){1}
-            %\put(36,20){2}
-            %\put(46,20){R} \put(57,20){...}
-            %\put(76,20){R} \put(86,20){R}
-            
-            %\put(26,20){R} 
 
-            \put(50,40){$i=1\% \Longrightarrow 1 + i = 1,01$} \put(5,27){0}
-            
-            \put(29,27){{\tiny 1}} 
-            \put(59,27){{\tiny 2}}
-            
-            \put(31,12){202,00}
-            \put(61,12){204,02}
-            
-            
-            %\put(19,27){1} 
-            %\put(29,27){2}
-            %\put(39,27){3} 
-            %\put(49,27){4}
-            %\put(67,27){n-2} 
-            %\put(77,27){n-1} 
-            %\put(89,27){n}
-            
-            \put(31,8){\vector(0, -1){20}}
-            
-        \end{picture}
-    }}
-\end{figure}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,238); %set diagram left start at 0, and has height of 238
+    
+    %Straight Lines [id:da741393816524873] 
+    \draw    (20,116) -- (490.5,116) ;
+    \draw [shift={(493.5,116)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+    %Straight Lines [id:da6211040131345571] 
+    \draw    (20,116) -- (20,12.5) ;
+    \draw [shift={(20,10.5)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Straight Lines [id:da04976474996355207] 
+    \draw    (140,116.5) -- (140,171.5) ;
+    \draw [shift={(140,173.5)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Straight Lines [id:da5038339861842813] 
+    \draw    (261,115.5) -- (261,170.5) ;
+    \draw [shift={(261,172.5)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Straight Lines [id:da3516868561588282] 
+    \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ]   (134,176.5) -- (29,176.5) ;
+    \draw [shift={(27,176.5)}, rotate = 360] [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Straight Lines [id:da13727046886374206] 
+    \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ]   (262,204) -- (31,204) ;
+    \draw [shift={(29,204)}, rotate = 360] [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    
+    % Text Node
+    \draw (28,7.9) node [anchor=north west][inner sep=0.75pt]    {$V$};
+    % Text Node
+    \draw (149,154.9) node [anchor=north west][inner sep=0.75pt]    {$202,00$};
+    % Text Node
+    \draw (270,153.9) node [anchor=north west][inner sep=0.75pt]    {$204,02$};
+    % Text Node
+    \draw (44,177.9) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$202\ \div \ 1,01 \ $};
+    % Text Node
+    \draw (99,208.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$204,02\ \div \ 1,01^{2} \ $};
+    % Text Node
+    \draw (15,119.5) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {0};
+    % Text Node
+    \draw (128,118.5) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {1};
+    % Text Node
+    \draw (248,118.5) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {2};
+    
+
+\end{tikzpicture}
+
