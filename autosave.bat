@@ -1,2 +1,2 @@
 git save "autosave %date%-%time:~0,8%"
-IF NOT "%CD%" EQU "D:\Pessoal\Chico\!Nuvem\OneDrive\#MaxMat1\Aulas\!e-book\MaxMat1-no-ENEM"  robocopy . "D:\Pessoal\Chico\!Nuvem\OneDrive\#MaxMat1\Aulas\!e-book\MaxMat1-no-ENEM" /s /eta /z /w:2 /r:10 /mt:32
+IF NOT "%CD%" EQU "D:\Pessoal\Chico\!Nuvem\OneDrive\#MaxMat1\Aulas\!e-book\MaxMat1-no-ENEM"  robocopy . "D:\Pessoal\Chico\!Nuvem\OneDrive\#MaxMat1\Aulas\!e-book\MaxMat1-no-ENEM" /s /eta /purge /z /w:2 /r:10 /mt:32 
