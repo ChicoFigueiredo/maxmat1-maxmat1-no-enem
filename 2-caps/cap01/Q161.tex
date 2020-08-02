@@ -34,6 +34,35 @@ A média diária de garrafas fora das especificações no período considerado �
 
 \textbf{Resolução}
 
+Interpetando adequadamente a tabela e a questão trata-se de uma média ponderada 
+
+% https://www.tablesgenerator.com - Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{center}
+    \begin{tabular}{ccc}
+        \rowcolor[HTML]{BFBFBF} 
+        {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Quantidade de garrafas \\ fora das especificações \\ por dia \\ (1) \end{tabular}} & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Quantidade \\ de \\ dias \\ (2) \end{tabular}} & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}} (1) $\times$ (2) \end{tabular}} \\
+        {\color[HTML]{000000} 0} & {\color[HTML]{000000} 52}  & {\color[HTML]{000000} 0} \\
+        {\color[HTML]{000000} 1} & {\color[HTML]{000000} 5}   & {\color[HTML]{000000} 5}  \\
+        {\color[HTML]{000000} 2} & {\color[HTML]{000000} 2}   & {\color[HTML]{000000} 4}  \\
+        {\color[HTML]{000000} 3} & {\color[HTML]{000000} 1}   & {\color[HTML]{000000} 3}  \\         {\color[HTML]{000000} Soma} & {\color[HTML]{000000} 60}   & {\color[HTML]{000000} 12}  \\ 
+    \end{tabular}
+\end{center}
+
+Matematicamente falando
+
+
+
+\begin{eqnarray*}
+    M_{p} 	&=& \dfrac{0 \cdot 52 + 1 \cdot 5 + 2 \cdot 2 + 3 \cdot 1}{52 + 5 + 2 + 1} \\
+            &=& \dfrac{0 + 5 + 4 + 3}{60} \\
+            &=& \dfrac{12}{60} \\
+            &=& \dfrac{1}{5} \\
+    M_{p}   &=& 0,2 \\
+\end{eqnarray*}
+
+
 \textbf{Rascunho}
 
 \opmul[decimalsepsymbol={,},displayintermediary=all]{1.01}{1.01}\flexquad{3}
