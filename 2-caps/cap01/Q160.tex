@@ -18,14 +18,27 @@ Se o novo jogador é 0,20 m mais baixo que o anterior, qual é a média de altur
 
 Dado que média $ M = \dfrac{S_{20}}{n} = \dfrac{\Sigma_{1}^{n} J_{i}}{n} \Rightarrow M = \dfrac{\Sigma_{1}^{20} J_{i}}{20} = 1,80m $
 
-Donde que se conclui que a soma das alturas dos jogadores é $ S =  $
+Donde que se conclui que a soma das alturas dos jogadores é $ S_{20} = \Sigma_{1}^{20} J_{i} = 1,80 \cdot 20 \Rightarrow \Sigma_{1}^{20} J_{i} = 36m $
+
+A nova soma, com o jogador trocado, diminuiu 0,20 m, ou seja
+
+$ S'_{20} = S_{20} - 0,20 \Rightarrow S'_{20} = 36m - 0,20m  \Rightarrow S'_{20} = 35,8m $
+
+A nova média é $ M' = \dfrac{S'_{20}}{20} \Rightarrow  M' = \dfrac{35,8}{20} \Rightarrow  M' = 1,79 $
+
+\textbf{Outra Resolução}
+
+O leitor pode também resolver rapidamente verificando que a nova média será decrescida de 0,20 m dividido pelos 20 membros, ou seia $ \dfrac{0,20}{20} = 0,01m $ ou seja, caindo de $ 1,80m $ para $ 1,80 - 0,01m = 1,79m $ 
 
 \textbf{Rascunho}
 
-\opmul[decimalsepsymbol={,},displayintermediary=all]{1.01}{1.01}\flexquad{3}
-\opdiv[decimalsepsymbol={,},displayintermediary=all]{202}{1.01}\flexquad{3}
-\opset{strikedecimalsepsymbol={\rlap{,}\rule[-1pt]{3pt}{0.4pt}}}
-\opdiv[decimalsepsymbol={,},shiftdecimalsep=both,displayintermediary=all]{204.02}{1.0201}\quad
+\opmul[decimalsepsymbol={,},displayintermediary=all]{1,80}{20}\flexquad{3}
+\opsub[decimalsepsymbol={,},displayintermediary=all]{36}{0,20}\flexquad{3}
+\opdiv[decimalsepsymbol={,},displayintermediary=all]{35,8}{20}\flexquad{3}
+
+\opdiv[decimalsepsymbol={,},displayintermediary=all]{0,20}{20}\flexquad{3}
+\opsub[decimalsepsymbol={,},displayintermediary=all]{1,80}{0,01}\flexquad{3}
+
 
 
 \begin{center}
