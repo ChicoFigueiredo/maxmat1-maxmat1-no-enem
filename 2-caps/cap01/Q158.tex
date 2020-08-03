@@ -2,7 +2,7 @@
 
 Comum em lançamentos de empreendimentos imobiliários, as maquetes de condomínios funcionam como uma ótima ferramenta de marketing para as construtoras, pois, além de encantar clientes, auxiliam de maneira significativa os corretores na negociação e venda de imóveis.
 
-Um condomínio está sendo lançado em um novo bairro de uma cidade. Na maquete projetada pela construtora, em escala de 1 : 200, existe um reservatório de água com capacidade de 45 cm3.
+Um condomínio está sendo lançado em um novo bairro de uma cidade. Na maquete projetada pela construtora, em escala de 1 : 200, existe um reservatório de água com capacidade de $ 45 cm^3 $.
 
 Quando todas as famílias estiverem residindo no condomínio, a estimativa é que, por dia, sejam consumidos 30 000 litros de água. 
 
@@ -29,14 +29,14 @@ Lembrando que à cada dimensão eu aplico a potência correta:
     \item espacial ou volumétrica $ \left( \dfrac{1}{200} \right)^{3} = \dfrac{1}{8.000.000}  $
 \end{itemize}
 
+Logo, cada $ 1 cm^3 $ equivale à $ 8.000.000 cm^3 $ ou seja, para $ 45 cm^{3}  $ teremos $ 45 \cdot 8.000.000 $
+
 \textbf{Rascunho}
 
-\opmul[decimalsepsymbol={,},displayintermediary=all]{200}{200}{200}\flexquad{3}
 \opmul[decimalsepsymbol={,},displayintermediary=all]{200}{200}\flexquad{3}
 \opmul[decimalsepsymbol={,},displayintermediary=all]{40000}{200}\flexquad{3}
-\opset{strikedecimalsepsymbol={\rlap{,}\rule[-1pt]{3pt}{0.4pt}}}
-\opdiv[decimalsepsymbol={,},shiftdecimalsep=both,displayintermediary=all]{204.02}{1.0201}\quad
-\opdiv[decimalsepsymbol={,},displayintermediary=all]{202}{1.01}\flexquad{3}
+\opmul[decimalsepsymbol={,},displayintermediary=all]{8000000}{45}\flexquad{3}
+%\opdiv[decimalsepsymbol={,},displayintermediary=all]{202}{1.01}\flexquad{3}
 
 
 \begin{center}
