@@ -45,3 +45,55 @@
 \makeatother
 
 \newcommand{\flexquad}[1]{\hskip#1em\relax}
+
+
+\newcommand\primedecomp[2][nil]{%
+    \begingroup
+    \opset{#1}%
+    \opcopy{#2}{NbtoDecompose}%
+    \opabs{NbtoDecompose}{NbtoDecompose}%
+    \opinteger{NbtoDecompose}{NbtoDecompose}%
+    \opcmp{NbtoDecompose}{0}%
+    \ifopeq
+    I refuse to factorize zero.
+    \else
+    \setbox1=\hbox{\opdisplay{operandstyle.1}%
+        {NbtoDecompose}}%
+    {\setbox2=\box2{}}%
+    \count255=1
+    \primeindex=0
+    \loop
+    \opcmp{NbtoDecompose}{1}\ifopneq
+    \opidiv*{NbtoDecompose}{P\the\primeindex}{q}{r}%
+    \opcmp{0}{r}\ifopeq
+    \ifvoid2
+    \setbox2=\hbox{%
+        \opdisplay{intermediarystyle.\the\count255}%
+        {P\the\primeindex}}%
+    \else
+    \setbox2=\vtop{%
+        \hbox{\box2}
+        \hbox{%
+            \opdisplay{intermediarystyle.\the\count255}%
+            {P\the\primeindex}}}
+    \fi
+    \opcopy{q}{NbtoDecompose}%
+    \advance\count255 by1
+    \setbox1=\vtop{%
+        \hbox{\box1}
+        \hbox{%
+            \opdisplay{operandstyle.\the\count255}%
+            {NbtoDecompose}}
+    }%
+    \else
+    \advance\primeindex by1
+    \fi
+    \repeat
+    \hbox{\box1
+        \kern0.5\opcolumnwidth
+        \opvline(0,0.75){\the\count255.25}
+        \kern0.5\opcolumnwidth
+        \box2}%
+    \fi
+    \endgroup
+}
