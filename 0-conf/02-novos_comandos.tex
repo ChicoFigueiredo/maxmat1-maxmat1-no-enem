@@ -47,7 +47,55 @@
 \newcommand{\flexquad}[1]{\hskip#1em\relax}
 
 
-\newcommand{\primedecomp}[2][nil]{%
+
+\newcount\primeindex
+\newcount\tryindex
+\newif\ifprime
+\newif\ifagain
+\newcommand\getprime[1]{%
+    \opcopy{2}{P0}%
+    \opcopy{3}{P1}%
+    \opcopy{5}{try}
+    \primeindex=2
+    \loop
+    \ifnum\primeindex<#1\relax
+    \testprimality
+    \ifprime
+    \opcopy{try}{P\the\primeindex}%
+    \advance\primeindex by1
+    \fi
+    \opadd*{try}{2}{try}%
+    \ifnum\primeindex<#1\relax
+    \testprimality
+    \ifprime
+    \opcopy{try}{P\the\primeindex}%
+    \advance\primeindex by1
+    \fi
+    \opadd*{try}{4}{try}%
+    \fi
+    \repeat
+}
+\newcommand\testprimality{%
+    \begingroup
+    \againtrue
+    \global\primetrue
+    \tryindex=0
+    \loop
+    \opidiv*{try}{P\the\tryindex}{q}{r}%
+    \opcmp{r}{0}%
+    \ifopeq \global\primefalse \againfalse \fi
+    \opcmp{q}{P\the\tryindex}%
+    \ifoplt \againfalse \fi
+    \advance\tryindex by1
+    \ifagain
+    \repeat
+    \endgroup
+}
+
+
+
+
+\newcommand\primedecomp[2][nil]{%
     \begingroup
     \opset{#1}%
     \opcopy{#2}{NbtoDecompose}%
