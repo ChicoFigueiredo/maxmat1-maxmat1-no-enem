@@ -39,16 +39,14 @@ O teste que apresentou maior quantidade de acertos foi o aplicado na
 % les matrices
 \matrix (A) [matrix of math nodes,%
              nodes = {node style ge},%
-             left delimiter  = (,%
-             right delimiter = )] at (0,0)
+             left delimiter  = {[},%
+             right delimiter = {]}] at (0,0)
 {%
-    a_{11} & a_{12} & \ldots & a_{1p}  \\
-    \node[node style sp] {a_{21}};%
-    & \node[node style sp] {a_{22}};%
-    & \ldots%
-    & \node[node style sp] {a_{2p}}; \\
-    \vdots & \vdots & \ddots & \vdots  \\
-    a_{n1} & a_{n2} & \ldots & a_{np}  \\
+    3 & 2 & 0 & 1 & 2 \\
+    3 & 2 & 4 & 1 & 2 \\
+    2 & 2 & 2 & 3 & 2 \\
+    3 & 2 & 4 & 1 & 0 \\
+    0 & 2 & 0 & 4 & 4 \\
 };
 \end{tikzpicture}
 
