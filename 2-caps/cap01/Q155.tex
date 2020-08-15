@@ -1,0 +1,73 @@
+\section{Questão 155 - Sequência, Resto da Divisão}
+
+Após o Fórum Nacional Contra a Pirataria (FNCP) incluir a linha de autopeças em campanha veiculada contra a falsificação, as agências fiscalizadoras divulgaram que os cinco principais produtos de autopeças falsificados são: rolamento, pastilha de freio, caixa de direção, catalisador e amortecedor.
+
+Após uma grande apreensão, as peças falsas foram cadastradas utilizando-se a codificação:
+
+\begin{flushright}
+    {\tiny Disponível em: www.oficinabrasil.com.br. Acesso em: 25 ago. 2014 (adaptado).}
+\end{flushright}
+
+1: rolamento, 2: pastilha de freio, 3: caixa de direção, 4: catalisador e 5: amortecedor.
+
+Ao final obteve-se a sequência: 5, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, ... que apresenta um padrão de formação que consiste na repetição de um bloco de números. Essa sequência descreve a ordem em que os produtos apreendidos foram cadastrados. 
+
+O 2 015º item cadastrado foi um(a)
+
+(A) rolamento.
+
+(B) catalisador.
+
+(C) amortecedor.
+
+(D) pastilha de freio.
+
+(E) caixa de direção.
+
+
+\textbf{Resolução}
+
+\renewcommand{\myunit}{.4cm}
+\newcommand{\nodeRectL}[7]{
+    \draw [ color={#2}  ,draw opacity=1 ] (#1-#3-#5.north west) -- (#1-#3-#6.north east) -- (#1-#4-#6.south east) -- (#1-#4-#5.south west) -- cycle;
+}
+
+\tikzset{
+    node style sp/.style={draw,circle,minimum size=\myunit},
+    node style ge/.style={circle,minimum size=\myunit},
+    arrow style mul/.style={draw,sloped,midway,fill=white},
+    arrow style plus/.style={midway,sloped,fill=white},
+}
+
+\noindent \resizebox{.5\textwidth}{!}{
+    \begin{tikzpicture}[scale=.6]
+    
+        \matrix (A) [matrix of math nodes,%
+        nodes = {node style ge}] at (0,0)
+        {
+             & 4 & 3 & 2 & 1 & 2 & 3 & 4 & 5 & 4 & 3 & 2 & 1 & 2 & 3 & 4 & 5 & 4 & 3 & 2 & 1 & 2 & 3 & 4  & 5 & 4 & 3 & ... \\
+        };
+        
+        
+        
+        \nodeRectL{B}{red}{1}{1}{1}{8};
+        \nodeRectL{B}{red}{1}{1}{9}{16};
+        \nodeRectL{B}{red}{1}{1}{17}{24};
+    
+    \end{tikzpicture}
+}
+
+\textbf{Rascunho}
+
+\opmul[decimalsepsymbol={,},displayintermediary=all]{1.01}{1.01}\flexquad{3}
+\opdiv[decimalsepsymbol={,},displayintermediary=all]{202}{1.01}\flexquad{3}
+\opset{strikedecimalsepsymbol={\rlap{,}\rule[-1pt]{3pt}{0.4pt}}}
+\opdiv[decimalsepsymbol={,},shiftdecimalsep=both,displayintermediary=all]{204.02}{1.0201}\quad
+
+
+\begin{center}
+    \href{https://youtu.be/}{
+        \qrcode{https://youtu.be/}
+    }\\
+    Resolução: \url{https://youtu.be/}
+\end{center}
