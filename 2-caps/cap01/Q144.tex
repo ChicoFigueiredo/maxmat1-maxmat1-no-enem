@@ -40,6 +40,10 @@ O teste que apresentou maior quantidade de acertos foi o aplicado na
     \node [ color={#1}  ,left = of A-#2-1.west] (A-#2-1-l) {#3}; \draw [  color={#1}  , draw opacity=1, -> ]   (A-#2-1-l.east) -- (A-#2-1.west) ; 
 }
 
+\newcommand{\ColunaExplicativa}[3] {
+    \node [ color={#1}  ,above = of A-1-#2.north] (A-1-#2-c) {#3}; \draw [  color={#1}  , draw opacity=1, -> ]   (A-1-#2-c.south) -- (A-1-#2.north) ; 
+}
+
 \tikzset{
     node style sp/.style={draw,circle,minimum size=\myunit},
     node style ge/.style={circle,minimum size=\myunit},
@@ -66,11 +70,17 @@ right delimiter = {]}] at (0,0)
 \nodeRectColumn{rgb, 100:red, 75; green, 75; blue, 75}{1}{5}{4}{4}{10}
 \nodeRectColumn{rgb, 100:red, 75; green, 75; blue, 75}{1}{5}{5}{5}{10}
 
-\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{1}{Linha 1 - Ana}
-\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{2}{Linha 2 - Bruno}
-\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{3}{Linha 3 - Carlos}
-\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{4}{Linha 4 - Denis}
-\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{5}{Linha 5 - Érica}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{1}{Ana}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{2}{Bruno}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{3}{Carlos}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{4}{Denis}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{5}{Érica}
+
+\ColunaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{1}{Seg}
+\ColunaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{2}{Ter}
+\ColunaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{3}{Qua}
+\ColunaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{4}{Qui}
+\ColunaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{5}{Sex}
 
 \end{tikzpicture}
 
