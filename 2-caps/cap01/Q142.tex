@@ -18,39 +18,39 @@ A conclusão correta a que o síndico deverá chegar, considerando a nova área 
 
 \textbf{Resolução}
 
-\noindent 
-\begin{tikzpicture}[>=latex,scale=.5]
-
-%\node (circle) [draw, circle, minimum size = 7cm, label=above:$M$] at (0, 0) {};
-%\node (circle) [draw, circle, minimum size = 3cm, label=above:$m$] at (0, 0) {};
-
-%\node (circle) [draw, circle, raduis = 7, label=above:$M$] at (0, 0) {};
-
-\draw[fill=green!10,even odd rule]  (0,0) circle (7)
-(0,0) circle (3);
-
-\draw [blue] circle [radius=7];  
-\draw [blue] circle [radius=3];
-
-\draw [<->](-7,9)--node[above]{$D = 6 + 8 = 14 \Rightarrow R = 7 $} (7,9);
-\draw [dotted,-](-7,9)--(-7,0);
-\draw [dotted,-](7,9)--(7,0);
-
-\draw [<->](-3,8)--node[above]{$d = 6 \Rightarrow r = 3 $} (3,8);
-\draw [dotted,-](-3,8)--(-3,0);
-\draw [dotted,-](3,8)--(3,0);
-
-\draw [->](0,0)--node[above right]{$r = 3$} (-45:3);
-
-\draw [<->](0,0)--node[below left=.4 and 0]{$R = 7$} (-60:7);
-
-\draw [->](-120:5)--(-120:10)node [below left=.4 and 0]{Área Coroa: $A = \pi R^2 - \pi r^2$ };
-
-
-%\draw [->](-5:-5)--(-7,-7);
-
-\end{tikzpicture}
-
+\noindent \resizebox{.5\textwidth}{!}{
+    \begin{tikzpicture}[>=latex,scale=.5]
+    
+    %\node (circle) [draw, circle, minimum size = 7cm, label=above:$M$] at (0, 0) {};
+    %\node (circle) [draw, circle, minimum size = 3cm, label=above:$m$] at (0, 0) {};
+    
+    %\node (circle) [draw, circle, raduis = 7, label=above:$M$] at (0, 0) {};
+    
+    \draw[fill=green!10,even odd rule]  (0,0) circle (7)
+    (0,0) circle (3);
+    
+    \draw [blue] circle [radius=7];  
+    \draw [blue] circle [radius=3];
+    
+    \draw [<->](-7,9)--node[above]{$D = 6 + 8 = 14 \Rightarrow R = 7 $} (7,9);
+    \draw [dotted,-](-7,9)--(-7,0);
+    \draw [dotted,-](7,9)--(7,0);
+    
+    \draw [<->](-3,8)--node[above]{$d = 6 \Rightarrow r = 3 $} (3,8);
+    \draw [dotted,-](-3,8)--(-3,0);
+    \draw [dotted,-](3,8)--(3,0);
+    
+    \draw [->](0,0)--node[above right]{$r = 3$} (-45:3);
+    
+    \draw [<->](0,0)--node[below left=.4 and 0]{$R = 7$} (-60:7);
+    
+    \draw [->](-120:5)--(-120:10)node [below left=.4 and 0]{Área Coroa: $A = \pi R^2 - \pi r^2$ };
+    
+    
+    %\draw [->](-5:-5)--(-7,-7);
+    
+    \end{tikzpicture}
+}
 \textbf{Rascunho}
 
 \opmul[decimalsepsymbol={,},displayintermediary=all]{1.01}{1.01}\flexquad{3}
