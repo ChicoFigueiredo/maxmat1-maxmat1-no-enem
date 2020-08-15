@@ -30,16 +30,14 @@ O teste que apresentou maior quantidade de acertos foi o aplicado na
 
 \newcommand{\myunit}{1 cm}
 
-\newcommand{\nodeRect}[2]{
-    \draw [ color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ] (A-#1-1.north west) -- (A-1-1.north east) -- (A-5-1.south east) -- (A-5-1.south west) -- cycle;
-    \node [ below = of A-5-1.south] (A-5-1-s) {11};
-    \draw [ color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1, -> ]   (A-5-1.south) -- (A-5-1-s)  ; 
-}
-
 \newcommand{\nodeRectColumn}[6]{
     \draw [ color={#1}  ,draw opacity=1 ] (A-#2-#4.north west) -- (A-#2-#5.north east) -- (A-#3-#5.south east) -- (A-#3-#4.south west) -- cycle;
     \node [ color={#1}  ,below = of A-#3-#4.south] (A-#3-#4-s) {#6};
     \draw [ color={#1}  ,draw opacity=1, -> ]   (A-#3-#4.south) -- (A-#3-#4-s) ; 
+}
+
+\newcommand{\LinhaExplicativa}[3] {
+    \node [ color={#1}  ,left = of A-#2-1.west] (A-#2-1-l) {#3}; \draw [  color={#1}  , draw opacity=1, -> ]   (A-#2-1-l.east) -- (A-#2-1.west) ; 
 }
 
 \tikzset{
@@ -62,13 +60,17 @@ right delimiter = {]}] at (0,0)
     0 & 2 & 0 & 4 & 4 \\
 };
 
-%\nodeRect{1}
-
 \nodeRectColumn{red}{1}{5}{1}{1}{11}
 \nodeRectColumn{rgb, 100:red, 75; green, 75; blue, 75}{1}{5}{2}{2}{10}
 \nodeRectColumn{rgb, 100:red, 75; green, 75; blue, 75}{1}{5}{3}{3}{10}
 \nodeRectColumn{rgb, 100:red, 75; green, 75; blue, 75}{1}{5}{4}{4}{10}
 \nodeRectColumn{rgb, 100:red, 75; green, 75; blue, 75}{1}{5}{5}{5}{10}
+
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{1}{Linha 1 - Ana}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{2}{Linha 2 - Bruno}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{3}{Linha 3 - Carlos}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{4}{Linha 4 - Denis}
+\LinhaExplicativa{rgb, 100:red, 50; green, 50; blue, 50}{5}{Linha 5 - Érica}
 
 \end{tikzpicture}
 
