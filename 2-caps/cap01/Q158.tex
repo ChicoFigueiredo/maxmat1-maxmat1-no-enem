@@ -20,6 +20,38 @@ Em uma eventual falta de água, o reservatório cheio será suficiente para abas
 
 
 \textbf{Resolução}
+\noindent \resizebox{.5\textwidth}{!}{
+    \begin{tikzpicture}
+        
+        \pgfmathsetmacro{\cubex}{1.5};
+        \pgfmathsetmacro{\cubey}{1};
+        \pgfmathsetmacro{\cubez}{1};
+        
+        \pgfmathsetmacro{\cubeX}{3};
+        \pgfmathsetmacro{\cubeY}{2};
+        \pgfmathsetmacro{\cubeZ}{2};
+        
+        
+        \draw [red,fill=yellow] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,-\cubey,0) -- ++(\cubex,0,0) -- cycle;
+        \draw [red,fill=yellow] (0,0,0) -- ++(0,0,-\cubez) -- ++(0,-\cubey,0) -- ++(0,0,\cubez) -- cycle;
+        \draw [red,fill=yellow] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,0,-\cubez) -- ++(\cubex,0,0) -- cycle;
+        
+        \draw[red,fill=yellow] (5,0,0) -- ++(-\cubeX,0,0) -- ++(0,-\cubeY,0) -- ++(\cubeX,0,0) -- cycle;
+        \draw[red,fill=yellow] (5,0,0) -- ++(0,0,-\cubeZ) -- ++(0,-\cubeY,0) -- ++(0,0,\cubeZ) -- cycle;
+        \draw[red,fill=yellow] (5,0,0) -- ++(-\cubeX,0,0) -- ++(0,0,-\cubeZ) -- ++(\cubeX,0,0) -- cycle;
+        
+        \draw [<->] (0,-1.3,0) -- node[below]{$ d $}             ++(-\cubex,0,0);
+        \draw [<->] (5,-2.3,0) -- node[below]{$ E \cdot d $} ++(-\cubeX,0,0);
+        
+        \node at (2,2,2) []  {Escala $ 1 : E$};
+        \node at (-.35,-.1,1) [fill=yellow]  {V};
+        \node at (4,-.5,1) [fill=yellow]  { $ E^3 \cdot V $ };
+        
+        %\draw[red] d -- D;
+        %\node at d.south {G}
+    
+    \end{tikzpicture}
+}
 
 A escala é linear $ 1:200 $  ou seja, cada centímetro na maquete mede 200 cm em escala real.
 Lembrando que à cada dimensão eu aplico a potência correta:
@@ -47,7 +79,6 @@ como o consumo diário previsto é de 30.000 litros/dia, teremos $ \dfrac{360.00
 \opmul[decimalsepsymbol={,},displayintermediary=all]{8000000}{45}\flexquad{3}
 
 \opdiv[decimalsepsymbol={,},displayintermediary=all]{360000}{30000}\flexquad{3}
-%\opdiv[decimalsepsymbol={,},displayintermediary=all]{202}{1.01}\flexquad{3}
 
 
 \begin{center}
