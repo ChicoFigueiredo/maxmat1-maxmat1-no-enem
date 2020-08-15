@@ -33,48 +33,28 @@ Um dos catetos será a diferença entre o lado maior do retângulo e o início d
 \noindent \resizebox{.5\textwidth}{!}{
     
     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-.5,xscale=.5]
-    %uncomment if require: \path (0,473); %set diagram left start at 0, and has height of 473
-    
-    %Straight Lines [id:da7181388705522671] 
     \draw    (61.5,31) -- (602.5,31) ;
-    %Straight Lines [id:da44939859555890327] 
     \draw    (602.5,31) -- (602.5,390) ;
-    %Straight Lines [id:da1206829123410158] 
     \draw    (239.8,391.29) -- (602.5,390) ;
-    %Straight Lines [id:da15071438547047888] 
     \draw    (61.5,31) -- (239.8,391.29) ;
-    %Straight Lines [id:da24551929708671127] 
     \draw    (345.13,262.63) -- (239.8,391.29) ;
-    %Straight Lines [id:da6934731152853295] 
     \draw    (61.5,31) -- (345.13,262.63) ;
-    %Shape: Rectangle [id:dp45624327686007016] 
     \draw   (338,256.91) -- (345.13,262.63) -- (339.32,269.88) -- (332.18,264.16) -- cycle ;
-    %Shape: Circle [id:dp7419514115799553] 
     \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (337.06,263.39) .. controls (337.06,262.51) and (337.78,261.8) .. (338.66,261.8) .. controls (339.54,261.8) and (340.25,262.51) .. (340.25,263.39) .. controls (340.25,264.27) and (339.54,264.99) .. (338.66,264.99) .. controls (337.78,264.99) and (337.06,264.27) .. (337.06,263.39) -- cycle ;
     
-    % Text Node
-    \draw (46,19.33) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE] [align=left] {A};
-    % Text Node
+    \draw (20,-5) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE] [align=left] {A};
     \draw (610,14.67) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE] [align=left] {B};
-    % Text Node
     \draw (610,381.33) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE] [align=left] {C};
-    % Text Node
     \draw (349.33,252.67) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE] [align=left] {D};
-    % Text Node
     \draw (222.67,395.33) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE] [align=left] {E};
-    % Text Node
-    \draw (307.33,0.73) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$18cm$};
-    % Text Node
-    \draw (608.67,197.4) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$12cm$};
-    % Text Node
-    \draw (409.33,398.73) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$12cm$};
-    % Text Node
-    \draw (304.67,323.4) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$6cm$};
-    % Text Node
-    \draw (252.67,160.73) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$12c	m$};
-    % Text Node
-    \draw (132.67,222.73) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$x$};
     
+    \draw (307.33,-15) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$18cm$};
+    \draw (608.67,197.4) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$12cm$};
+    \draw (409.33,398.73) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$12cm$};
+    
+    \draw (304.67,323.4) node [color=red,anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$6cm$};
+    \draw (265,150) node [color=red,anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$12cm$};    
+    \draw (120,222.73) node [color=red,anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$x$};
     
     \end{tikzpicture}
     
@@ -97,13 +77,10 @@ Disso temos, por Pitágoras:
 
 \textbf{Rascunho}
 
+\getprime{200}%
+
 \opmul[decimalsepsymbol={,},displayintermediary=all]{12}{12}\flexquad{3}
 \opadd[decimalsepsymbol={,},displayintermediary=all]{12}{12}\flexquad{3}
-
-%\primedecomp[operandstyle.2=\red,intermediarystyle.2=\red]{252}
-%\primedecomp[]{252}
-%\primedecomp{252}
-\getprime{200}%
 \primedecomp{180}
 
 \opdiv[decimalsepsymbol={,},displayintermediary=all]{202}{1.01}\flexquad{3}
