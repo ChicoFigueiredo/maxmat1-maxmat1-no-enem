@@ -40,10 +40,26 @@ O 2 015º item cadastrado foi um(a)
 }
 
 \noindent \resizebox{.5\textwidth}{!}{
-        \begin{tikzpicture}[scale=.6]
+    \begin{tikzpicture}[scale=.6]
+        
+        \matrix (A) [matrix of math nodes,%
+        nodes = {node style ge},ampersand replacement=\&] at (0,0)
+        {%
+            5 \& 4 \& 3 \& 2 \& 1 \& 2 \& 3 \& 4 \& 5 \& 4 \& 3 \& 2 \& 1 \& 2 \& 3 \& 4 \& 5 \& 4 \& 3 \& 2 \& 1 \& 2 \& 3 \& 4  \& 5 \& 4 \& 3 \& ... \\
+        };
         
         
-        \end{tikzpicture}
+        \matrix (B) [matrix of math nodes,%
+        nodes = {node style ge},ampersand replacement=\&] at (0,-1)
+        {%
+            5 \& 4 \& 3 \& 2 \& 1 \& 2 \& 3 \& 4 \& 5 \& 4 \& 3 \& 2 \& 1 \& 2 \& 3 \& 4 \& 5 \& 4 \& 3 \& 2 \& 1 \& 2 \& 3 \& 4  \& 5 \& 4 \& 3 \& ... \\
+        };	
+        
+        \nodeRectL{B}{red}{1}{1}{1}{8};
+        \nodeRectL{B}{red}{1}{1}{9}{16};
+        \nodeRectL{B}{red}{1}{1}{17}{24};
+        
+    \end{tikzpicture}
 }
 
 \textbf{Rascunho}
