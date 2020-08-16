@@ -27,6 +27,8 @@ O 2 015º item cadastrado foi um(a)
 
 \textbf{Resolução}
 
+Podemos verificar que a lista possui um padrão de repetição de tamanho 8 itens conforme esquema abaixo:
+
 \renewcommand{\myunit}{.4cm}
 \newcommand{\nodeRectL}[7]{
     \draw [ color={#2}  ,draw opacity=1 ] (#1-#3-#5.north west) -- (#1-#3-#6.north east) -- (#1-#4-#6.south east) -- (#1-#4-#5.south west) -- cycle;
@@ -39,7 +41,7 @@ O 2 015º item cadastrado foi um(a)
     arrow style plus/.style={midway,sloped,fill=white},
 }
 
-\noindent \resizebox{.5\textwidth}{!}{
+\noindent \resizebox{\linewidth}{!}{
     \begin{tikzpicture}[scale=.6]
         
         \matrix (A) [matrix of math nodes,%
