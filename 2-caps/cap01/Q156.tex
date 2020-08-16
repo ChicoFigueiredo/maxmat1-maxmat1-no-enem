@@ -1,14 +1,40 @@
 \section{Questão 156 - Combinatória}
 
+Durante suas férias, oito amigos, dos quais dois são canhotos, decidem realizar um torneio de vôlei de raia.
+Eles precisam formar quatro duplas para a realização do torneio. Nenhuma dupla pode ser formada por dois jogadores canhotos.
+
+De quantas maneiras diferentes podem ser formadas essas quatro duplas?
+
+(A)  69
+
+(B)  70
+
+(C)  90
+
+(D)  104
+
+(E) 105
+
 \textbf{Resolução}
 
-\textbf{Rascunho}
+Vamos por etapas:
 
-\opmul[decimalsepsymbol={,},displayintermediary=all]{1.01}{1.01}\flexquad{3}
-\opdiv[decimalsepsymbol={,},displayintermediary=all]{202}{1.01}\flexquad{3}
-\opset{strikedecimalsepsymbol={\rlap{,}\rule[-1pt]{3pt}{0.4pt}}}
-\opdiv[decimalsepsymbol={,},shiftdecimalsep=both,displayintermediary=all]{204.02}{1.0201}\quad
+\begin{enumerate}
+    \item A primeira dupla pode escolher 1 dos dois canhotos e o outro jogador obrigatoriamente será destro. Isto posto, temos 2 formas de escolher o canhoto e 6 maneiras de escolher o destro, ou seja, temos $ 2 \cdot 6 = 12 $ duplas possíveis. 
+    \item A segunda dupla só pode escolher 1 entre os canhotos disponíveis e 5 entre os destros disponíveis, ou seja $ 1 \cdot 5  = 5 $ maneiras distintas.
+    \item A terceira dupla só pode ser montada com destros. ou seja podemos escolher de 4 maneiras possíveis o primeiro integrante e 3 maneiras possíveis o segundo membro, ou seja $ 4 \cdot 3  = 12 $ maneiras. Como a ordem não importa, dividimos por 2 as escolhas $ \dfrac{12}{2} = 6$ duplas distintas
+    \item Como só sobra 2 integrantes, ele formam a única dupla
+\end{enumerate}
 
+Contabilizando, temos que por conta da natureza combinatória dos 2 primeiros grupos, tenho que dividir a multiplicação deles por 2, bem como os dois últimos grupos também preciso dividir por 2.
+
+Temos:
+
+\[
+\dfrac{12 \cdot 5}{2} \cdot \dfrac{6 \cdot 1}{2} = 6 \cdot 5 \cdot 3 \cdot 1 = 30 \cdot 3 = 90
+\]
+
+O que corresponde ao gabarito (C)
 
 \begin{center}
     \href{https://youtu.be/}{
