@@ -64,10 +64,16 @@ Podemos verificar que a lista possui um padrão de repetição de tamanho de 8 i
     \end{tikzpicture}
 }
 
+A resolução dessa questão passa pelo conhecimento do algoritmo de divisão, mais precisamente do resto...
+
+Primeiro faremos a divisão do numeral 2.015 por 8 que é o tamanho da sequencia 
+
+\opdiv[decimalsepsymbol={,},displayintermediary=all]{2015}{8}\flexquad{3}
+
+
 \textbf{Rascunho}
 
 \opmul[decimalsepsymbol={,},displayintermediary=all]{1.01}{1.01}\flexquad{3}
-\opdiv[decimalsepsymbol={,},displayintermediary=all]{202}{1.01}\flexquad{3}
 \opset{strikedecimalsepsymbol={\rlap{,}\rule[-1pt]{3pt}{0.4pt}}}
 \opdiv[decimalsepsymbol={,},shiftdecimalsep=both,displayintermediary=all]{204.02}{1.0201}\quad
 
