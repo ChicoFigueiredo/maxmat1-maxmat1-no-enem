@@ -20,7 +20,7 @@ Podemos usar o raciocínio destrutivo: Montar todas as possíveis subtraindo tod
 
 \renewcommand{\CancelColor}{\color{red}}
 
-Formação de todas as combinações possíveis, sem levar em conta os canhotos: 
+\noindent 1. Formação de todas as combinações possíveis, sem levar em conta os canhotos: 
 \begin{eqnarray*}
 \dfrac{C_{8, 2} \cdot C_{6, 2} \cdot C_{4, 2} \cdot C_{2, 2}  }{4!} &=& \\
 \\
@@ -35,8 +35,29 @@ C_{8, 2} \cdot C_{6, 2} \cdot C_{4, 2} \cdot C_{2, 2}  \cdot \dfrac{1}{4!} &=& \
 \\
 \dfrac{\bcancel{8} \cdot 7 \cdot \cancelto{3}{6} \cdot 5 \cdot \cancel{4!}}{\bcancel{2} \cdot \bcancel{2} \cdot \cancel{2} \cdot \bcancel{2} \cdot \cancel{4!}}  &=& \\
 \\
-7 \cdot 3 \cdot 5  &=& 105\\
+7 \cdot 3 \cdot 5  &=& 105
 \end{eqnarray*}
+
+\noindent 2. Para atender a condição de que os dois canhotos não formam uma só dupla, o que não me interessam:
+
+\begin{eqnarray*}
+\dfrac{C_{2, 2} \cdot C_{6, 2} \cdot C_{4, 2} \cdot C_{2, 2}  }{3!} &=& \\
+\\
+C_{2, 2} \cdot C_{6, 2} \cdot C_{4, 2} \cdot C_{2, 2}  \cdot \dfrac{1}{4!} &=& \\
+\\
+\dfrac{2!}{2! 0!} \cdot \dfrac{6!}{2! 4!} \cdot \dfrac{4!}{2! 2!} \cdot \dfrac{2!}{1! 0!} \cdot
+\dfrac{1}{3!}  &=& \\
+\\
+\cancelto{1}{\dfrac{2!}{2! 0!}} \cdot \dfrac{6!}{2! 4!} \cdot \dfrac{4!}{2! 2!} \cdot \cancelto{1}{\dfrac{2!}{2! 0!}}  \cdot
+\dfrac{1}{3!}  &=& \\
+\\
+\dfrac{6 \cdot 5 \cdot 4 \cdot 3!}{ 2 \cdot 2 \cdot 2 \cdot 3!}  &=& \\
+\\
+\dfrac{\cancelto{3}{6} \cdot 5 \cdot \bcancel{4} \cdot \xcancel{3!}}{ \cancel{2} \cdot \bcancel{2} \cdot \bcancel{2} \cdot \xcancel{3!}}  &=& \\
+\\
+3 \cdot 5  &=& 105
+\end{eqnarray*}
+ 
 
 \textbf{Outra resolução:}
 Vamos por etapas:
